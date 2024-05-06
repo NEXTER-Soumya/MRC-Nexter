@@ -53,10 +53,10 @@ def recommend(movie):
 @app.route("/")
 def home():
     """Home page route"""
-    return render_template("index.html", movie_list=movies['title'].values)
+    return render_template("index.html")
 
 
-@app.route('/recommend', methods=['POST'])
+@app.route('/recommend', methods=['GET','POST'])
 def recommends():
     movies_list = movies['title'].values
     status = False

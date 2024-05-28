@@ -54,9 +54,8 @@ def recommend(movie):
 def home():
     """Home page route"""
     return render_template("index.html")
-
-
-@app.route('/recommend', methods=['GET','POST'])
+    
+@app.route("/recommend",methods=['GET','POST'])
 def recommends():
     movies_list = movies['title'].values
     status = False
@@ -69,8 +68,7 @@ def recommends():
     # If request method is not 'POST', return the template here
     return render_template('recommend.html',status=status,movie_list=movies_list)
 
-
-@app.route('/about')
+@app.route("/about")
 def about():
     """about page route"""
     return render_template('about.html')

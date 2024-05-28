@@ -56,7 +56,7 @@ def home():
     return render_template("index.html")
 
 
-@app.route('/recommend', methods=['GET','POST'])
+@app.route('/recommend', methods=['POST'])
 def recommends():
     movies_list = movies['title'].values
     status = False
